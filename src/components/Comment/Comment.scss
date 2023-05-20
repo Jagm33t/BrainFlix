@@ -10,32 +10,81 @@
   &-commenthead{
     font-size: 1rem;
     font-weight: 700;
+    font-size: 0.75rem;
     color: $BrainFlix-Black;
   }
 
   &-comment__label{
     color: $Silver;
-    font-weight: 400;
+    font-weight: 700;
+    font-size: 0.6rem;
+    line-height: 1.25rem;
+    
+    @include tablet{
+      
+    }
+    
   
   }
   &-commenttype{
-    border: 1px solid black;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 1rem;
-    
+   
   
   }
-  &-comment__text{
-    width: 15rem;
-    min-width: 100%;
+
+
+  &-commenttwo{
+
+    @include tablet{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 90%;
+    }
+  }
+  &-commentimp{
+
+    @include tablet{
+      width: 100%;
+       display:flex ;
+       flex-direction: column;
+       
+       
+    }
+   
+  }
+  &-commentimage{
+    width: 2.25rem;
     height: 2.25rem;
+    border-radius: 50%;
+    vertical-align:middle;
+    display: inline-block;
+    margin-top: 1.6rem;
+    margin-right: 0.7rem;
+
+    @include tablet{
+      margin-top: 1.2rem;
+    }
+  }
+  &-comment__text{
+    height: 4.25rem;
+    width: 100% ;
     border-radius: 0.25rem;
     background-color:$Alabaster;
-   
+   border: 1px solid $Mercury;
     font-weight: 400;
-  
+    margin-bottom: 0.5rem;
+    font-size: 0.6rem;
+    
+    @include tablet{
+     height: 2rem;
+     width: 95%;
+     
+     
+    }
     
   }
   &-comment__btn{
@@ -49,6 +98,16 @@
     width: 100%;
     border-radius: 0.25rem;
     font-weight: 700;
+
+
+    @include tablet{
+      width: 30%;
+      font-weight: 400;
+      margin-top: 3%;
+      background-size: 11%;
+      background-position:0.7rem 0.8rem ;
+
+     }
   }
   &-partfirst{
     padding-left: 1rem;
@@ -62,12 +121,7 @@
   
   }
 
-  &-viewsection{
-      display: flex;
-      justify-content: space-between;
-      border-top: 1px solid $Mercury;
-      border-bottom: 1px solid $Mercury;;
-    }
+
   &-section{
     padding: 0rem 0.6rem 0rem 0.6rem;
   }
@@ -83,10 +137,21 @@
   
   &-commentdisplay{
     display: inline-block;
-    width: 95%;
-    padding-left: 0.5rem;
+    width: 84%;
+    
+
   
   
+  }
+  &-imgcom{
+    display: flex;
+    
+  }
+  &-commentimgplace{
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    opacity: 10%;
   }
   &-commentsubdisplay{
     display: flex;
@@ -95,18 +160,26 @@
   &-commentname{
       display:inline-block;
       font-size: 0.87rem;
-      font-weight: 600;
+      font-weight: 700;
+      margin-left: 6%;
+   
+      margin-bottom: 0;
     }
   &-commenttime{
       display: inline-block;
       font-size: 0.81rem;
       color: $Silver;
+   
+      margin-bottom: 0;
      
     }
   &-commentarea{
       width: 83%;
-      padding-left: 15%;
+      padding-left: 1%;
     font-weight: 400;
     font-size: 0.81rem;
+    padding-left: 6%;
+  
+    
     }
   }

@@ -9,19 +9,35 @@
 
   display: flex;
   flex-direction: column;
+
+  @include tablet{
+    flex-direction: row;
+    justify-content: space-between;
+
+  }
  
   
   
 &-logo{
   height: 1.562rem;
   width: 7.6rem;
-  margin: 8% 0% 8% 35%
+  margin: 8% 0% 5% 35%;
+ 
+  @include tablet{
+    margin:3% 0% 0% 5%;
+  }
+
 }
 &-allarea{
  display: flex;
  justify-content: space-evenly;
  margin: 0rem 0rem 1rem 0rem;
  
+
+ @include tablet{
+  margin:2% 0% 2% 3%;
+  width: 70%;
+ }
 }
 &-searcharea{
   width: 70%;
@@ -29,6 +45,8 @@
   border-radius:0.25rem;
   display: inline-block;
   background-color: $Alabaster;
+
+
 }
 &-searchicon{
   width: 1.2rem;
@@ -48,8 +66,23 @@
   border: none;
   border-radius:0.25rem;
   background-color: $Alabaster;
+  
 
 }
+
+&-image {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  vertical-align:middle;
+  display: inline-block;
+
+ @include tablet{
+   display: none;
+ }
+
+}
+
 &-uplbtn{
   max-width: 90%;
   background-image: url("../../assets/Icons/upload.svg");
@@ -61,5 +94,24 @@
   height:2.5rem;
   border-radius: 0.25rem;
   border: none;
+
+
+  @include tablet{
+    margin:2% 0% 2% 0%;
+    width: 30%;
+   }
+
+}
+&-image1{
+  display: none;
+  @include tablet{
+
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    vertical-align:middle;
+    display: inline-block;
+    margin:2.5% 3% 2% 3%;
+  }
 }
 }

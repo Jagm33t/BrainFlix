@@ -21,14 +21,14 @@ function Header (props){
   <p className="main-autor--date">{new Date(props.activeVideo.timestamp).toLocaleDateString()}</p>
     </div>
 
-<div>
+<div className="main-viewlike">
   <p className="main-view"><span><img src={Views} /></span>{props.activeVideo.views}</p>
   <p className="main-like"><span><img src={Likes} /></span>{props.activeVideo.likes}</p>
   </div>
 
     </div>
 
-  <div className="main-breif" >
+  <div className="main-brief" >
    <p>{props.activeVideo.description}</p>
     </div>
 

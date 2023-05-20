@@ -7,9 +7,37 @@
 
 &-head{
   color:$BrainFlix-Black;
+  font-size: 1.5rem;
+  line-height: 2rem;
  font-weight: 700;
+
+
+ @include tablet{
+ font-size: 2.06rem;
+  
+}
+}
+&-viewsection{
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid $Mercury;
+  border-bottom: 1px solid $Mercury;
+
+  @include tablet{
+    border-top: none;
+    
+  }
 }
 
+&-author{
+
+  @include tablet{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 30%;
+  }
+}
 &-author--name{
   color:$BrainFlix-Black;
  font-weight: 700;
@@ -17,5 +45,20 @@
 }
 &-autor--date , &-like , &-view{
  color: $Silver;
+}
+
+&-viewlike{
+
+  @include tablet{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 30%;
+  }
+}
+
+&-brieff{
+font-size:0.81rem ;
+line-height: 1.12rem;
 }
 }

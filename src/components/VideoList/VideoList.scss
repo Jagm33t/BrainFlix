@@ -11,26 +11,43 @@
   
 &__head{
   color: $Silver;
+  font-size:0.75rem ;
+  line-height: 1.25rem;
   font-weight: 700;
 }
 
   &-element{
     display: flex;
     justify-content: space-between;
-  border: 1px solid black;
+   
+
   }
   
   
   &-image{
-   width: 50%;
+   width: 14rem;
+   height: 5rem;
     vertical-align: middle;
+    object-fit: cover; 
     
   
     border-radius:0.25rem;
   }
+  &-eachdetails{
+    margin-top: 0.2rem;
+    margin-left: 0.5rem;
+  }
 
   &-title {
-    border: 1px solid black;
+   
     margin-top: 0rem;
+    font-size: 0.81rem;
+    line-height: 1.12rem;
+    color: $BrainFlix-Black;
+
+  }
+  &-channel{
+    font-size: 0.81rem;
+    line-height: 1.12rem;
   }
   }

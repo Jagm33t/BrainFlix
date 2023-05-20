@@ -18,6 +18,7 @@ function Navhead(){
       <img className="navhead-image" src={NavImg} alt="NavImage"/>
       </div>
       <button className="navhead-uplbtn">UPLOAD</button>
+      <img className="navhead-image1" src={NavImg} alt="NavImage"/>
     </div>
   );
 }
