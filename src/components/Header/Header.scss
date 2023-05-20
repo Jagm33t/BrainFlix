@@ -1,0 +1,21 @@
+@use "../../styles/partials/variable" as*;
+@use "../../styles/partials/global" as*;
+@use "../../styles/partials/fonts" as*;
+@use "../../styles/partials/mixin" as*;
+
+.main{
+
+&-head{
+  color:$BrainFlix-Black;
+ font-weight: 700;
+}
+
+&-author--name{
+  color:$BrainFlix-Black;
+ font-weight: 700;
+
+}
+&-autor--date , &-like , &-view{
+ color: $Silver;
+}
+}

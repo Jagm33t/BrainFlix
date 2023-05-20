@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "Avenir";
+  src: url(../../assets/Font/AvenirNextLTPro-Regular.otf) format("OpenType");
+  src: url(../../assets/Font/Alternativefiles/AvenirNextLTPro.ttf) format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url(../../assets/Font/AvenirNextLTPro-Bold.otf) format("OpenType");
+  src: url(../../assets/Font/Alternativefiles/AvenirNextLTProBold.ttf) format("truetype");
+  font-weight: 700;
+}
+body {
+  font-family: Avenir;
+}
+
+.main-head {
+  color: #323232;
+  font-weight: 700;
+}
+.main-author--name {
+  color: #323232;
+  font-weight: 700;
+}
+.main-autor--date, .main-like, .main-view {
+  color: #AFAFAF;
+}/*# sourceMappingURL=Header.css.map */

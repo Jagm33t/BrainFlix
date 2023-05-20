@@ -1,0 +1,65 @@
+@use "../../styles/partials/variable" as*;
+@use "../../styles/partials/global" as*;
+@use "../../styles/partials/fonts" as*;
+@use "../../styles/partials/mixin" as*;
+
+
+  
+.navhead{
+
+  display: flex;
+  flex-direction: column;
+ 
+  
+  
+&-logo{
+  height: 1.562rem;
+  width: 7.6rem;
+  margin: 8% 0% 8% 35%
+}
+&-allarea{
+ display: flex;
+ justify-content: space-evenly;
+ margin: 0rem 0rem 1rem 0rem;
+ 
+}
+&-searcharea{
+  width: 70%;
+  border: 1px solid $Mercury;
+  border-radius:0.25rem;
+  display: inline-block;
+  background-color: $Alabaster;
+}
+&-searchicon{
+  width: 1.2rem;
+  height: 1.5rem;
+  vertical-align: middle;
+  border: 1px solid $Mercury;
+  border: none;
+ padding: 0.44rem;
+ border-radius:0.25rem;
+ 
+  
+}
+&-input{
+  height: 2.25rem;
+  width: 83.3%;
+  border: 1px solid $Mercury;
+  border: none;
+  border-radius:0.25rem;
+  background-color: $Alabaster;
+
+}
+&-uplbtn{
+  max-width: 90%;
+  background-image: url("../../assets/Icons/upload.svg");
+  background-repeat: no-repeat;
+  background-position: 0.5rem;
+  color: $White;
+  background-color: $BrainFlix-Blue;
+  margin: 0rem 0rem 1rem 1rem;
+  height:2.5rem;
+  border-radius: 0.25rem;
+  border: none;
+}
+}

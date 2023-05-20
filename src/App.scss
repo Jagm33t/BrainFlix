@@ -1,0 +1,28 @@
+@use "./styles/partials/variable" as *;
+
+
+
+
+
+
+.navhead-image , .main-commentimage{
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  vertical-align:middle;
+  display: inline-block;
+}
+
+
+.hero{
+
+&-image{
+  width: 100%;
+}
+}
+
+
+
+
+
+

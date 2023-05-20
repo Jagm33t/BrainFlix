@@ -1,0 +1,8 @@
+@use "./variable" as *; 
+@use "./fonts" as *;
+@use "./mixin" as *;
+
+
+body{
+  font-family: Avenir;
+}
