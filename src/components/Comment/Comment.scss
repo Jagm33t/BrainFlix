@@ -20,9 +20,7 @@
     font-size: 0.6rem;
     line-height: 1.25rem;
     
-    @include tablet{
-      
-    }
+   
     
   
   }
@@ -32,7 +30,9 @@
     justify-content: space-between;
     margin-bottom: 1rem;
    
-  
+    @include desktop {
+      padding-right: 1.5rem;
+    }
   }
 
 
@@ -44,10 +44,23 @@
       justify-content: space-between;
       width: 90%;
     }
+    @include desktop{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 90%;
+    }
   }
   &-commentimp{
 
     @include tablet{
+      width: 100%;
+       display:flex ;
+       flex-direction: column;
+       
+       
+    }
+    @include desktop{
       width: 100%;
        display:flex ;
        flex-direction: column;
@@ -67,6 +80,13 @@
 
     @include tablet{
       margin-top: 1.2rem;
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+    @include desktop{
+      width: 2.5rem;
+      height: 2.5rem;
+      margin-top: 1rem;
     }
   }
   &-comment__text{
@@ -78,6 +98,11 @@
     font-weight: 400;
     margin-bottom: 0.5rem;
     font-size: 0.6rem;
+
+    &::placeholder {
+      color: $BrainFlix-DarkBlack;
+      
+    }
     
     @include tablet{
      height: 2rem;
@@ -85,6 +110,11 @@
      
      
     }
+    @include desktop{
+      height: 2rem;
+      width: 95%;
+      
+    } 
     
   }
   &-comment__btn{
@@ -108,17 +138,43 @@
       background-position:0.7rem 0.8rem ;
 
      }
+
+    @include desktop{
+      width: 30%;
+      font-weight: 400;
+      margin-top: 3%;
+      background-size: 11%;
+      background-position:0.7rem 0.8rem ;
+
+     }
   }
   &-partfirst{
     padding-left: 1rem;
     padding-right: 1rem;
+
+    @include tablet {
+      padding-left:1.5rem ;
+      padding-right:1.5rem;
+    }
+    @include desktop {
+      padding-left:0rem ;
+      padding-right:0rem;
+      
+    }
     
   }
   &-parttwo{
     padding-left: 1rem;
     padding-right: 1rem;
 
-  
+    @include tablet {
+      padding-left:1.5rem ;
+      padding-right:1.5rem;
+    }
+    @include desktop {
+      padding-left:0rem ;
+      padding-right:0rem;
+    }
   }
 
 
@@ -127,17 +183,27 @@
   }
   &-commentconatainer{
     padding: 1rem;
-   
+  
    
   }
   &-commentelement{
     border-top: 1px solid $Mercury;
    
+    @include desktop{
+      padding-right: 1rem;
+    }
   }
   
   &-commentdisplay{
     display: inline-block;
     width: 84%;
+
+    @include tablet{
+     width: 94%;
+    }
+    @include desktop{
+      width: 94%;
+    }
     
 
   
@@ -156,13 +222,15 @@
   &-commentsubdisplay{
     display: flex;
     justify-content: space-between;
+
+    
   }
   &-commentname{
       display:inline-block;
       font-size: 0.87rem;
       font-weight: 700;
       margin-left: 6%;
-   
+    color: $BrainFlix-Black;
       margin-bottom: 0;
     }
   &-commenttime{
@@ -180,6 +248,16 @@
     font-size: 0.81rem;
     padding-left: 6%;
   
-    
+    @include tablet{
+      width: 100%;
+      
+    }
+    @include desktop{
+      width: 100%;
+      
+    }
     }
   }
+
+
+

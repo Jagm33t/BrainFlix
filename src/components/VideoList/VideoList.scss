@@ -8,45 +8,64 @@
   flex-direction: column;
   padding: 0rem 1rem;
   
+  @include tablet {
+    padding-left:1.5rem ;
+    padding-right:1.5rem;
   
-&__head{
+  }
+  @include desktop{
+    width: 25%;
+    padding-top: 2%;
+  }
+  
+ &__head{
   color: $Silver;
   font-size:0.75rem ;
   line-height: 1.25rem;
   font-weight: 700;
+ 
 }
 
-  &-element{
+ &-element{
     display: flex;
     justify-content: space-between;
    
+    @include tablet{
+      width: 40%;
+    }
 
   }
+ &-imagesection{
+  width: 40%;
+  margin-bottom: 3%;
+ } 
   
-  
-  &-image{
-   width: 14rem;
-   height: 5rem;
+ &-image{
+   width: 100%;
+   height: 4rem;
     vertical-align: middle;
     object-fit: cover; 
     
   
     border-radius:0.25rem;
   }
-  &-eachdetails{
+ &-eachdetails{
     margin-top: 0.2rem;
     margin-left: 0.5rem;
+    width: 60%;
   }
 
-  &-title {
+ &-title {
    
     margin-top: 0rem;
+    margin-bottom: 0.5rem;
     font-size: 0.81rem;
     line-height: 1.12rem;
     color: $BrainFlix-Black;
 
   }
   &-channel{
+    margin-top: 0rem;
     font-size: 0.81rem;
     line-height: 1.12rem;
   }

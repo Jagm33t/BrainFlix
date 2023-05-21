@@ -1,17 +1,37 @@
 @use "./styles/partials/variable" as *;
+@use "./styles/partials/mixin" as *;
+@use "./styles/partials/global" as *;
+@use "./styles/partials/fonts" as *;
 
 
 
 
 
+.details{
 
 
+  &-content{
 
-.hero{
+    @include desktop{
+      display: flex;
+      padding-left: 10%;
+      width:87%;
+    
+   
+    }
 
-&-image{
-  width: 100%;
+    
 }
+
+&-contentview{
+  @include desktop{
+   width: 65%;
+   border-right:1px solid $Mercury ;
+   padding-top: 2%;
+
+  }
+}
+
 }
 
 

@@ -11,8 +11,10 @@ function VideoList (props){
 .map((video) => (
   <div key={video.id}onClick={() => props.handleVideoClick(video.id)}>
 <div className='videolist-element'>
-  
-          <img className='videolist-image' src={video.image} alt={video.title} />
+  <div className='videolist-imagesection'>
+  <img className='videolist-image' src={video.image} alt={video.title} />
+  </div>
+
           <div className='videolist-eachdetails'>
           <h4 className='videolist-title'>{video.title}</h4>
           <p className='videolist-channel'>{video.channel}</p>

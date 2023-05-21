@@ -2,16 +2,18 @@ import { useState } from 'react';
 import './App.scss';
 import Navhead from './components/Navhead/Navhead';
 
-import VideoList from './components/VideoList/VideoList';
+
 
 import videoData from "./data/video-details.json";
+
+import Hero from "./components/Hero/Hero"
 
 import Header from "./components/Header/Header";
 
 import Comment from './components/Comment/Comment';
 
 
-
+import VideoList from './components/VideoList/VideoList';
 
 
 
@@ -47,12 +49,28 @@ const handleVideoClick = (id) => {
 
  <Navhead/>
 
-<Header activeVideo={activeVideo}/>
+ <div className="main-image">
+
+<Hero activeVideo={activeVideo}/>
+
+ </div>
+<div className="details-content">
+  <div className="details-contentview">
+
+
+    
+ <Header activeVideo={activeVideo}/>
 
 <Comment activeVideo={activeVideo}/>
 
+
+  </div>
+
+
  
 < VideoList videos={Videos} handleVideoClick={handleVideoClick} activeVideo={activeVideo}/>
+
+</div>
     </>
   )
 

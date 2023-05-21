@@ -6,7 +6,8 @@ import Likes from "../../assets/Icons/likes.svg"
 function Header (props){
   return(
    <>
-   <video className="hero-image" controls poster={props.activeVideo.image} alt="activeVideo"></video>
+ 
+
     
     <div className="main-partfirst">
     <div className="main-content">

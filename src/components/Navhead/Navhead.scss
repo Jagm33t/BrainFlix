@@ -15,6 +15,12 @@
     justify-content: space-between;
 
   }
+  @include desktop{
+    flex-direction: row;
+     width: 86% ;
+     padding-left: 7%;
+
+  }
  
   
   
@@ -24,6 +30,9 @@
   margin: 8% 0% 5% 35%;
  
   @include tablet{
+    margin:3% 0% 0% 5%;
+  }
+  @include desktop{
     margin:3% 0% 0% 5%;
   }
 
@@ -37,6 +46,12 @@
  @include tablet{
   margin:2% 0% 2% 3%;
   width: 70%;
+ }
+ @include desktop{
+  margin:2% 0% 2% 3%;
+  width: 40%;
+  padding-left: 25%;
+  
  }
 }
 &-searcharea{
@@ -66,7 +81,9 @@
   border: none;
   border-radius:0.25rem;
   background-color: $Alabaster;
-  
+  &::placeholder {
+    color: $BrainFlix-DarkBlack;
+  }
 
 }
 
@@ -81,6 +98,10 @@
    display: none;
  }
 
+
+ @include desktop{
+  display: none;
+}
 }
 
 &-uplbtn{
@@ -101,17 +122,30 @@
     width: 30%;
    }
 
+  @include desktop{
+    width: 15%;
+    margin:2% 0% 2% 0%;
+  } 
+
 }
 &-image1{
   display: none;
   @include tablet{
 
-    width: 2.25rem;
-    height: 2.25rem;
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: 50%;
     vertical-align:middle;
     display: inline-block;
     margin:2.5% 3% 2% 3%;
+  }
+  @include desktop{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    vertical-align:middle;
+    display: inline-block;
+    margin:2% 3% 2% 3%;
   }
 }
 }
