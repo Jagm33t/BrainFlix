@@ -3,6 +3,12 @@
 @use "./mixin" as *;
 
 
+//Targeting all files styling 
 *{
   font-family: Avenir;
+  
+}
+
+body{
+  box-sizing: border-box;
 }

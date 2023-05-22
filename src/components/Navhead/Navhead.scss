@@ -60,7 +60,7 @@
   border-radius:0.25rem;
   display: inline-block;
   background-color: $Alabaster;
-
+ 
 
 }
 &-searchicon{
@@ -84,7 +84,7 @@
   &::placeholder {
     color: $BrainFlix-DarkBlack;
   }
-
+ 
 }
 
 &-image {
@@ -116,7 +116,10 @@
   border-radius: 0.25rem;
   border: none;
 
-
+  &:hover{
+    background-color: $BrainFlix-DarkBlue;
+  }
+ 
   @include tablet{
     margin:2% 0% 2% 0%;
     width: 30%;
@@ -137,7 +140,7 @@
     border-radius: 50%;
     vertical-align:middle;
     display: inline-block;
-    margin:2.5% 3% 2% 3%;
+    margin:2% 3% 2% 3%;
   }
   @include desktop{
     width: 2.5rem;
@@ -149,3 +152,4 @@
   }
 }
 }
+

@@ -7,6 +7,23 @@
 .main{
 
 
+//Detail activevideo styling
+  &-partfirst{
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    @include tablet {
+      padding-left:1.5rem ;
+      padding-right:1.5rem;
+    }
+    @include desktop {
+      padding-left:0rem ;
+      padding-right:0rem;
+      
+    }
+    
+  }
+
   &-commenthead{
     font-size: 1rem;
     font-weight: 700;
@@ -129,11 +146,14 @@
     border-radius: 0.25rem;
     font-weight: 700;
 
+    &:hover{
+      background-color: $BrainFlix-DarkBlue;
+    }
 
     @include tablet{
       width: 30%;
       font-weight: 400;
-      margin-top: 3%;
+      margin-top: 2.5%;
       background-size: 11%;
       background-position:0.7rem 0.8rem ;
 
@@ -148,25 +168,16 @@
 
      }
   }
-  &-partfirst{
-    padding-left: 1rem;
-    padding-right: 1rem;
+ 
 
-    @include tablet {
-      padding-left:1.5rem ;
-      padding-right:1.5rem;
-    }
-    @include desktop {
-      padding-left:0rem ;
-      padding-right:0rem;
-      
-    }
-    
-  }
+
+  //Comment display section for activevideo
   &-parttwo{
     padding-left: 1rem;
     padding-right: 1rem;
+    border-bottom: 1px solid $Mercury;
 
+  
     @include tablet {
       padding-left:1.5rem ;
       padding-right:1.5rem;
