@@ -7,22 +7,7 @@
 .main{
 
 
-//Detail activevideo styling
-  &-partfirst{
-    padding-left: 1rem;
-    padding-right: 1rem;
 
-    @include tablet {
-      padding-left:1.5rem ;
-      padding-right:1.5rem;
-    }
-    @include desktop {
-      padding-left:0rem ;
-      padding-right:0rem;
-      
-    }
-    
-  }
 
   &-commenthead{
     font-size: 1rem;

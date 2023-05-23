@@ -7,12 +7,27 @@
 
 .main{
 
+//Hero section 
+  &-image{
+    background-color: $BrainFlix-DarkBlack;
+     @include tablet {
+       padding-left:1.5rem ;
+       padding-right:1.5rem;
+     }
+     @include desktop{
+       display: flex;
+       justify-content: center;
+       
+     }
+    } 
+
+    //Hero section active image display
   &-heroimage{
     width: 100%;
   
     @include desktop{
     width: 70%;
-   
+   height: auto;
     }
   }
   

@@ -4,15 +4,15 @@ import MainImg from "../../assets/Images/Mohan-muruge.jpg"
 
 function Comment (props){
 
+
+
   // console.log(props.activeVideo.comments)
   const activeComments = props.activeVideo.comments;
   return (
-    
 
+    <>
 
-
-
-
+<div>
 <div className="main-parttwo">
  
  <h3 className="main-commenthead">{props.activeVideo.comments.length} Comments</h3>
@@ -42,22 +42,15 @@ function Comment (props){
           <p className="main-commenttime">{new Date(comment.timestamp).toLocaleDateString()}</p>
         </div>
         <div className="main-imgcom">
-
-<p className="main-commentarea">{comment.comment}</p>
-</div>
+      <p className="main-commentarea">{comment.comment}</p>
       </div>
-   
- 
     </div>
-  </div>
-  
+   </div>
+  </div> 
 )}
-
-
-    </div>
-
-
-    
+ </div>
+</div>
+    </>
   )
 }
 
