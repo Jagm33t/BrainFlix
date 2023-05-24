@@ -18,17 +18,27 @@ body {
   box-sizing: border-box;
 }
 
-@media (min-width: 1281px) {
-  .details-content {
-    display: flex;
-    padding-left: 10%;
-    width: 87%;
+.main-image {
+  background-color: #000000;
+}
+@media (max-width: 1280px) and (min-width: 768px) {
+  .main-image {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 }
 @media (min-width: 1281px) {
-  .details-contentview {
-    width: 65%;
-    border-right: 1px solid #E1E1E1;
-    padding-top: 2%;
+  .main-image {
+    display: flex;
+    justify-content: center;
   }
-}/*# sourceMappingURL=App.css.map */
+}
+.main-heroimage {
+  width: 100%;
+}
+@media (min-width: 1281px) {
+  .main-heroimage {
+    width: 70%;
+    height: auto;
+  }
+}/*# sourceMappingURL=Hero.css.map */

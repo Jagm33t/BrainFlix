@@ -10,13 +10,64 @@
   src: url(../../assets/Font/Alternativefiles/AvenirNextLTProBold.ttf) format("truetype");
   font-weight: 700;
 }
-body {
+* {
   font-family: Avenir;
 }
 
+body {
+  box-sizing: border-box;
+}
+
+.main-partfirst {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media (max-width: 1280px) and (min-width: 768px) {
+  .main-partfirst {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+@media (min-width: 1281px) {
+  .main-partfirst {
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+}
 .main-head {
   color: #323232;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 700;
+}
+@media (max-width: 1280px) and (min-width: 768px) {
+  .main-head {
+    font-size: 2.06rem;
+  }
+}
+.main-viewsection {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #E1E1E1;
+  border-bottom: 1px solid #E1E1E1;
+}
+@media (max-width: 1280px) and (min-width: 768px) {
+  .main-viewsection {
+    border-top: none;
+  }
+}
+@media (min-width: 1281px) {
+  .main-viewsection {
+    padding-right: 1.5rem;
+  }
+}
+@media (max-width: 1280px) and (min-width: 768px) {
+  .main-author {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 30%;
+  }
 }
 .main-author--name {
   color: #323232;
@@ -24,4 +75,26 @@ body {
 }
 .main-autor--date, .main-like, .main-view {
   color: #AFAFAF;
+}
+@media (max-width: 1280px) and (min-width: 768px) {
+  .main-viewlike {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 30%;
+  }
+}
+.main-brief {
+  font-size: 0.81rem;
+  line-height: 1.12rem;
+}
+@media (max-width: 1280px) and (min-width: 768px) {
+  .main-brief {
+    font-size: 0.875rem;
+  }
+}
+@media (min-width: 1281px) {
+  .main-brief {
+    padding-right: 1.5rem;
+  }
 }/*# sourceMappingURL=Header.css.map */

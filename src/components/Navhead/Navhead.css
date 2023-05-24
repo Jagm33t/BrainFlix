@@ -10,23 +10,63 @@
   src: url(../../assets/Font/Alternativefiles/AvenirNextLTProBold.ttf) format("truetype");
   font-weight: 700;
 }
-body {
+* {
   font-family: Avenir;
+}
+
+body {
+  box-sizing: border-box;
 }
 
 .navhead {
   display: flex;
   flex-direction: column;
 }
+@media (max-width: 1280px) and (min-width: 768px) {
+  .navhead {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1281px) {
+  .navhead {
+    flex-direction: row;
+    width: 86%;
+    padding-left: 7%;
+  }
+}
 .navhead-logo {
   height: 1.562rem;
   width: 7.6rem;
-  margin: 8% 0% 8% 35%;
+  margin: 8% 0% 5% 35%;
+}
+@media (max-width: 1280px) and (min-width: 768px) {
+  .navhead-logo {
+    margin: 3% 0% 0% 5%;
+  }
+}
+@media (min-width: 1281px) {
+  .navhead-logo {
+    margin: 3% 0% 0% 5%;
+  }
 }
 .navhead-allarea {
   display: flex;
   justify-content: space-evenly;
   margin: 0rem 0rem 1rem 0rem;
+}
+@media (max-width: 1280px) and (min-width: 768px) {
+  .navhead-allarea {
+    margin: 2% 0% 2% 3%;
+    width: 70%;
+  }
+}
+@media (min-width: 1281px) {
+  .navhead-allarea {
+    margin: 2% 0% 2% 3%;
+    width: 40%;
+    padding-left: 25%;
+  }
 }
 .navhead-searcharea {
   width: 70%;
@@ -52,6 +92,26 @@ body {
   border-radius: 0.25rem;
   background-color: #FAFAFA;
 }
+.navhead-input::placeholder {
+  color: #000000;
+}
+.navhead-image {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  vertical-align: middle;
+  display: inline-block;
+}
+@media (max-width: 1280px) and (min-width: 768px) {
+  .navhead-image {
+    display: none;
+  }
+}
+@media (min-width: 1281px) {
+  .navhead-image {
+    display: none;
+  }
+}
 .navhead-uplbtn {
   max-width: 90%;
   background-image: url("../../assets/Icons/upload.svg");
@@ -63,4 +123,42 @@ body {
   height: 2.5rem;
   border-radius: 0.25rem;
   border: none;
+}
+.navhead-uplbtn:hover {
+  background-color: #0065AD;
+}
+@media (max-width: 1280px) and (min-width: 768px) {
+  .navhead-uplbtn {
+    margin: 2% 0% 2% 0%;
+    width: 30%;
+  }
+}
+@media (min-width: 1281px) {
+  .navhead-uplbtn {
+    width: 15%;
+    margin: 2% 0% 2% 0%;
+  }
+}
+.navhead-image1 {
+  display: none;
+}
+@media (max-width: 1280px) and (min-width: 768px) {
+  .navhead-image1 {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    vertical-align: middle;
+    display: inline-block;
+    margin: 2% 3% 2% 3%;
+  }
+}
+@media (min-width: 1281px) {
+  .navhead-image1 {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    vertical-align: middle;
+    display: inline-block;
+    margin: 2% 3% 2% 3%;
+  }
 }/*# sourceMappingURL=Navhead.css.map */

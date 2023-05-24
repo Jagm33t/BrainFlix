@@ -1,8 +1,10 @@
 
 import { useState } from 'react';
 import './App.scss';
-
-
+import ReactDOM from "react-dom";
+import {BrowserRouter,Routes,Route} from 'react-router-dom';
+import Home from './pages/Home/Home';
+import Upload from './pages/Upload/Upload'
 
 // Importing Data for display
 import videoData from "./data/video-details.json";
@@ -53,38 +55,20 @@ function App() {
 
   return (
     <>
-
-
-
  <Navhead/>
-
-
-{/* Creating new divs to style for desktop view */}
-
- <div className="main-image">
-
-{/* Active image section */}
-<Hero activeVideo={activeVideo}/>
-
- </div>
-<div className="details-content">
-  <div className="details-contentview">
-
-{/* ActiveVideo details section */}
-    
- <Header activeVideo={activeVideo}/>
-
-{/* Comment section */}
-<Comment activeVideo={activeVideo}/>
-
-
-  </div>
-
-
- {/* Videolist Section */}
-< VideoList videos={Videos} handleVideoClick={handleVideoClick} activeVideo={activeVideo}/>
-
+<BrowserRouter>
+<div>
+  <Routes>
+    <Route path='/' element={<Home activeVideo={activeVideo} handleVideoClick={handleVideoClick} videos={Videos} />}/>
+    <Route path='upload' element={<Upload/>}/>
+  </Routes>
 </div>
+</BrowserRouter>
+
+
+{/* <Home activeVideo={activeVideo} handleVideoClick={handleVideoClick} videos={Videos} /> */}
+
+
     </>
   )
 
