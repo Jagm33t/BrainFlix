@@ -4,6 +4,7 @@ import Likes from "../../assets/Icons/likes.svg"
 
 
 function Header (props){
+  console.log(props)
   return(
    <>
  
@@ -19,7 +20,7 @@ function Header (props){
 
     <div className="main-author">    
    <p className="main-author--name">By {props.activeVideo.channel}</p>
-  <p className="main-autor--date">{new Date(props.activeVideo.timestamp).toLocaleDateString()}</p>
+  <p className="main-autor--date">{new Date(props.timestamp).toLocaleDateString()}</p>
     </div>
 
 <div className="main-viewlike">

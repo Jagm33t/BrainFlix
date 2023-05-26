@@ -6,7 +6,7 @@ function Comment (props){
 
 
 
-  // console.log(props.activeVideo.comments)
+  // console.log(props.comments)
   const activeComments = props.activeVideo.comments;
   return (
 

@@ -10,15 +10,14 @@
   border-top:1px solid $Mercury ;
   padding-left: 1rem;
   padding-right: 1rem;
-  
-  &-videothumb{
-    max-width: 100%;
-    border-radius: 0.25rem;
-    margin: 0rem 0rem 1rem 0rem;
-    
-    @include tablet{
-      max-width:50% ;
-    }
+
+  @include tablet{
+   padding-left: 6%;
+   padding-right: 6%;
+  }
+  @include desktop{
+    padding-left: 10%;
+    padding-right: 10%;
   }
 
   &-videohead{
@@ -28,10 +27,75 @@
 
     @include tablet{
       padding-top: 1rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 1px solid $Mercury;
+      padding-bottom: 1rem;
+      font-size: 2.06rem;
+      line-height: 2.75rem;
+
     }
+    @include desktop{
+      font-size: 2.06rem;
+      line-height: 2.75rem;
+
+    }
+   
+
+
   }
+ &-videocontainer{
+   @include tablet{
+     padding-bottom: 1.5rem;
+     border-bottom: 1px solid $Mercury;
+     border-top: 1px solid $Mercury;
+   }
+   @include desktop{
+   display: flex;
+   justify-content: space-between;
+   align-items:flex-start;
+   border-bottom: 1px solid $Mercury;
+   border-top: 1px solid $Mercury;
+   padding-top: 1.2rem;
+
+  }
+ }
+
+  &-videodisplay{
+    @include tablet{
+      display: flex;
+      flex-direction: column;
+
+    }
+    @include desktop{
+     max-width: 32%;
+      display: inline;
+    }
+    
+  }
+  
+  &-videothumb{
+    max-width: 100%;
+    border-radius: 0.25rem;
+    margin: 0rem 0rem 1rem 0rem;
+    
+    @include tablet{
+      max-width:50% ;
+    }
+    @include desktop{
+      width: 100%;
+      
+    }
+   
+  }
+
+&-videodetails{
+  display: flex;
+  flex-direction: column;
+
+  @include desktop{
+    width: 65%;
+     
+   }
+   
+}
 
   &-video__label, &-title__label, &-thumb__label{
     color: $Silver;
@@ -39,6 +103,8 @@
     font-size: 0.75rem;
     line-height: 1.25rem;
     margin: 1rem 0rem 0.2rem 0rem;
+
+
    
     
   
@@ -54,6 +120,18 @@
       padding: 2%;
       
     }
+  @include tablet{
+    &::placeholder {
+        padding: 1%;
+      }
+    }
+  @include desktop{
+    &::placeholder {
+      padding: 1%;
+    }
+  }
+   
+
   }
 
   &-video__text{
@@ -67,6 +145,16 @@
       color: $BrainFlix-DarkBlack;
       padding: 2%;
     }
+    @include tablet{
+      &::placeholder {
+        padding: 1%;
+      }
+    }
+    @include desktop{
+      &::placeholder {
+        padding: 1%;
+      }
+    }
 
    
   }
@@ -77,6 +165,12 @@
       justify-content: end;
       align-items: baseline;
       
+    }
+    @include desktop{
+      display: flex;
+      flex-direction: row;
+      justify-content: end;
+      align-items: baseline;
     }
   }
  
@@ -100,6 +194,9 @@
      max-width: 20%;
    
     }
+    @include desktop{
+      max-width: 20%;
+    }
   }
 
 
@@ -115,6 +212,9 @@
       
        display: none;
      }
+    @include desktop{
+      display: none;
+    }
   }
   &-cancel__btn1{
     display: none;
@@ -126,6 +226,17 @@
       color: $BrainFlix-Blue;
       width: 20%;
       height:2.5rem;
+      font-weight: 700;
+     
+    }
+    @include desktop{
+      display: inline-block;
+      background-color: $White;
+      border: none;
+      color: $BrainFlix-Blue;
+      width: 20%;
+      height:2.5rem;
+      font-weight: 700;
      
     }
 

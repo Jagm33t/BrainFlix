@@ -1,4 +1,6 @@
 import "./VideoList.scss";
+import { Link } from "react-router-dom";
+
 function VideoList (props){
 
   return(
@@ -9,8 +11,8 @@ function VideoList (props){
 <div className="videolist__container">
 {props.videos.filter((video) => video.id !== props.activeVideo.id)
 .map((video) => (
-  <div key={video.id}onClick={() => props.handleVideoClick(video.id)}>
-<div className='videolist-element'>
+  <div key={video.id}>
+<Link to={'/video/:videoId'} ><div className='videolist-element'>
   <div className='videolist-imagesection'>
   <img className='videolist-image' src={video.image} alt={video.title} />
   </div>
@@ -19,7 +21,7 @@ function VideoList (props){
           <h4 className='videolist-title'>{video.title}</h4>
           <p className='videolist-channel'>{video.channel}</p>
           </div>
-</div></div>
+</div></Link></div>
 ))}
 </div>
 
@@ -29,6 +31,8 @@ function VideoList (props){
   )
 }
 
-
+// /video/:videoId <Link to={`/recipes/${recipe.id}`}>
 
 export default VideoList
+
+// onClick={() => props.handleVideoClick(video.id)}

@@ -24,7 +24,7 @@
  
   
   
-&-logo{
+&-logo-link{
   height: 1.562rem;
   width: 7.6rem;
   margin: 8% 0% 5% 35%;
@@ -61,7 +61,10 @@
   display: inline-block;
   background-color: $Alabaster;
  
+@include tablet{
+  width: 80;
 
+}
 
 }
 &-searchicon{
@@ -104,15 +107,28 @@
   display: none;
 }
 }
+&-uplbtn-link{
+  width: 90%;
+  height:2.5rem;
+  margin: 0rem 0rem 1rem 1rem;
+   @include tablet{
+    margin:2% 0% 2% 0%;
+    width: 30%;
+   }
+
+  @include desktop{
+    width: 15%;
+    margin:2% 0% 2% 0%;
+  } 
+}
 
 &-uplbtn{
-  max-width: 90%;
+  width: 100%;
   background-image: url("../../assets/Icons/upload.svg");
   background-repeat: no-repeat;
   background-position: 0.5rem;
   color: $White;
   background-color: $BrainFlix-Blue;
-  margin: 0rem 0rem 1rem 1rem;
   height:2.5rem;
   border-radius: 0.25rem;
   border: none;
@@ -122,13 +138,13 @@
   }
  
   @include tablet{
-    margin:2% 0% 2% 0%;
-    width: 30%;
+
+    width: 9.37rem;
    }
 
   @include desktop{
-    width: 15%;
-    margin:2% 0% 2% 0%;
+    width: 9.37rem;
+    
   } 
 
 }
