@@ -2,12 +2,39 @@ import "./Comment.scss";
 import MainImg from "../../assets/Images/Mohan-muruge.jpg"
 
 
+// Using function to get time period 
+export const timeDifference = (timestamp ) => {
+  //Current date
+  const now = new Date();
+  //Date from data
+  const commentTime = new Date(timestamp);
+  //  difference in seconds calculation
+  const differenceSeconds = Math.floor((now - commentTime) / 1000);
+
+  if (differenceSeconds < 60) {
+    return `${differenceSeconds} seconds ago`;
+ //Result in Minutes
+  } else if (differenceSeconds < 3600) {
+    const differenceMinutes = Math.floor(differenceSeconds / 60);
+    return `${differenceMinutes} minutes ago`;
+//Result in  Hours 
+  } else if (differenceSeconds < 86400) {
+    const differenceHours = Math.floor(differenceSeconds / 3600);
+    return `${differenceHours} hours ago`;
+  } else {//3600 * 24 gives days
+    const differenceDays = Math.floor(differenceSeconds / 86400);
+    return `${differenceDays} days ago`;
+  }
+};
+
 function Comment (props){
 
 
 
   // console.log(props.comments)
   const activeComments = props.activeVideo.comments;
+
+
   return (
 
     <>
@@ -39,7 +66,7 @@ function Comment (props){
       <div className="main-commentdisplay">
         <div className="main-commentsubdisplay">
           <h3 className="main-commentname">{comment.name}</h3>
-          <p className="main-commenttime">{new Date(comment.timestamp).toLocaleDateString()}</p>
+          <p className="main-commenttime">{timeDifference(comment.timestamp)}</p>
         </div>
         <div className="main-imgcom">
       <p className="main-commentarea">{comment.comment}</p>
@@ -53,5 +80,6 @@ function Comment (props){
     </>
   )
 }
+
 
 export default Comment

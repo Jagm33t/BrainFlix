@@ -8,6 +8,10 @@
   flex-direction: column;
   padding: 0rem 1rem;
   
+
+  &__link{
+    text-decoration: none;
+  }
   @include tablet {
     padding-left:1.5rem ;
     padding-right:1.5rem;
@@ -68,5 +72,6 @@
     margin-top: 0rem;
     font-size: 0.81rem;
     line-height: 1.12rem;
+    color: $BrainFlix-Black;
   }
   }

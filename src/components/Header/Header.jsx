@@ -1,7 +1,7 @@
 import "./Header.scss";
 import Views from "../../assets/Icons/views.svg"
 import Likes from "../../assets/Icons/likes.svg"
-
+import { timeDifference } from "../Comment/Comment"
 
 function Header (props){
   console.log(props)
@@ -20,7 +20,7 @@ function Header (props){
 
     <div className="main-author">    
    <p className="main-author--name">By {props.activeVideo.channel}</p>
-  <p className="main-autor--date">{new Date(props.timestamp).toLocaleDateString()}</p>
+  <p className="main-autor--date">{timeDifference(props.activeVideo.timestamp)}</p>
     </div>
 
 <div className="main-viewlike">

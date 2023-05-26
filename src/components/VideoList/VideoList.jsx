@@ -1,5 +1,5 @@
 import "./VideoList.scss";
-import { Link } from "react-router-dom";
+import { Link, } from "react-router-dom";
 
 function VideoList (props){
 
@@ -12,7 +12,8 @@ function VideoList (props){
 {props.videos.filter((video) => video.id !== props.activeVideo.id)
 .map((video) => (
   <div key={video.id}>
-<Link to={'/video/:videoId'} ><div className='videolist-element'>
+ <Link className="videolist__link" to={`/video/${video.id}`}>
+  <div className='videolist-element'>
   <div className='videolist-imagesection'>
   <img className='videolist-image' src={video.image} alt={video.title} />
   </div>
