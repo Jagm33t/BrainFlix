@@ -4,8 +4,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
-import videoData from "../../data/video-details.json";
-// import Navhead from '../../components/Navhead';
+
 import Hero from "../../components/Hero/Hero"
 import Header from "../../components/Header/Header";
 import Comment from '../../components/Comment/Comment';
@@ -21,7 +20,7 @@ function Home (){
   const [ activeVideo, setActiveVideo ] = useState({}); 
 
   const params = useParams();
-  console.log("params: ",params.videoId)
+
 
  
 
@@ -29,7 +28,6 @@ function Home (){
     axios
       .get("https://project-2-api.herokuapp.com/videos?api_key=2674a343-d3a8-4521-a489-4042f7462147")
       .then((response) => {
-        console.log("REsPonse",response);
         setVideos(response.data);
     
       });
@@ -40,12 +38,11 @@ function Home (){
       axios
       .get(`https://project-2-api.herokuapp.com/videos/${params.videoId}/?api_key=2674a343-d3a8-4521-a489-4042f7462147`)
       .then((response) => {
-        console.log("paramssssss",response);
         setActiveVideo(response.data);
       })
     }else{
       axios
-      .get(`https://project-2-api.herokuapp.com/videos/random?api_key=2674a343-d3a8-4521-a489-4042f7462147`)
+      .get(`https://project-2-api.herokuapp.com/videos/84e96018-4022-434e-80bf-000ce4cd12b8?api_key=2674a343-d3a8-4521-a489-4042f7462147`)
       .then ((response) => {
         setActiveVideo(response.data);
        
@@ -55,21 +52,9 @@ function Home (){
    
   }, [params.videoId]);
     
-// //Setting a click function 
-//  const handleVideoClick = (id) => {
-//   // console.log(id);
-//   const foundVideo = Videos.find((Video) => Video.id === id);
-//   // console.log("found video :" ,foundVideo);
 
 
 
-// // CLicked video setting to be a active one for display
-//   // setActiveVideo(foundVideo);
-  
-
-// }
-
-console.log("activeeeee video" , activeVideo);
 
   return(
     <>

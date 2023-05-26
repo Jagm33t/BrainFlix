@@ -6,9 +6,7 @@ function Video({videos}) {
  
 
   const {videoId} = useParams();
-  // console.log(`id param is: ${videoId}`);
-  // console.log(`data: ${videos}`)
-  // console.log("data: ", videos)
+ 
 
   const movie= videos.find((video) => video.id === videoId);
   console.log("movie", movie);

@@ -1,18 +1,31 @@
-// import { useState } from 'react';
+import { useState ,  useEffect } from 'react';
 import "./Upload.scss";
 import thumbnail from "../../assets/Images/Upload-video-preview.jpg";
+import { useNavigate } from "react-router-dom";
 
-// import Navhead from '../../components/Navhead';
-// import Hero from "../../components/Hero/Hero"
-// import Header from "../../components/Header/Header";
-// import Comment from '../../components/Comment/Comment';
-// import VideoList from '../../components/VideoList/VideoList';
 
 
 function Upload(){
 
+  const navigate = useNavigate();
+  const handleSubmit = (event) => {
+   
+    //Prevent defaultPage Load 
+    event.preventDefault();
+   
+
+    // Display an alert
+    alert('Form submitted successfully! Congratulationssssss');
+  
+    //Navigate to home page after form submit
+  
+    navigate("/Home");
+  };
+
+
   return (
     <div className="upload">
+      <form onSubmit={handleSubmit} >
     <h1 className='upload-videohead'>Upload Video</h1>
 <div className="upload-videocontainer">
   <div className="upload-videodisplay">
@@ -37,6 +50,7 @@ function Upload(){
       <button className="upload-cancel__btn"  id="upload-cancel__btn">CANCEL</button>
 
     </div>
+    </form>
     </div>
   )
 }
