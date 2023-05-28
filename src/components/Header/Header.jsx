@@ -4,7 +4,7 @@ import Likes from "../../assets/Icons/likes.svg"
 import { timeDifference } from "../Comment/Comment"
 
 function Header (props){
-  console.log(props)
+ 
   return(
    <>
  

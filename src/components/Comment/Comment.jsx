@@ -1,5 +1,6 @@
 import "./Comment.scss";
 import MainImg from "../../assets/Images/Mohan-muruge.jpg"
+import React, { useState } from 'react';
 
 
 // Using function to get time period 
@@ -27,9 +28,15 @@ export const timeDifference = (timestamp ) => {
   }
 };
 
+
+
+
+
+
+
 function Comment (props){
 
-
+  const [newComment, setNewComment] = useState('');
 
   // console.log(props.comments)
   const activeComments = props.activeVideo.comments;
@@ -50,10 +57,26 @@ function Comment (props){
       <div className="main-commenttwo">
         <div className="main-commentimp">
         <label htmlFor="main-commentinput" className="main-comment__label">JOIN THE CONVERSATION</label>
-      <textarea type="textarea" className="main-comment__text" id="main-commentinput" placeholder="Add a new comment" required></textarea>
+      <textarea type="textarea"
+       className="main-comment__text" 
+       id="main-commentinput" 
+       placeholder="Add a new comment"
+       value={newComment}
+       onChange={event => setNewComment(event.target.value)}
+       required>
+
+      </textarea>
+        
         </div>
 
-        <button className="main-comment__btn" type="submit" id="submit-btn">COMMENT</button>
+        <button className="main-comment__btn"
+         type="submit" 
+         id="submit-btn"
+         onClick={() => {
+          props.postComment(newComment);
+          setNewComment('');
+         }}
+         >COMMENT</button>
       </div>
   
     </div>

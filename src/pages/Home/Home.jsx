@@ -19,6 +19,8 @@ function Home (){
 
   const [ activeVideo, setActiveVideo ] = useState({}); 
 
+  const [comments, setComments] = useState([]);
+
   const params = useParams();
 
 
@@ -52,9 +54,19 @@ function Home (){
    
   }, [params.videoId]);
     
-
-
-
+  const postComment = (commentText) => {
+    axios
+      .post(`https://project-2-api.herokuapp.com/videos/${activeVideo.id}/comments?api_key=2674a343-d3a8-4521-a489-4042f7462147`, {
+        comment: commentText
+      })
+      .then(response => {
+        const newComment = response.data;
+        setComments([...comments, newComment]);
+      })
+      .catch(error => {
+        console.log('Error posting comment:', error);
+      });
+  };
 
   return(
     <>
@@ -66,7 +78,8 @@ function Home (){
     <div className="details-content">
       <div className="details-contentview">
         <Header  activeVideo={activeVideo} />
-        <Comment activeVideo={activeVideo} />
+        <Comment activeVideo={activeVideo} comments={comments}
+  postComment={postComment} />
       </div>
       <VideoList videos={Videos}  activeVideo={activeVideo} />
     </div>
