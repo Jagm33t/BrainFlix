@@ -28,7 +28,7 @@ function Home (){
 
   useEffect(() => {
     axios
-      .get("https://project-2-api.herokuapp.com/videos?api_key=2674a343-d3a8-4521-a489-4042f7462147")
+      .get("http://localhost:8080/videos")
       .then((response) => {
         setVideos(response.data);
     
@@ -38,13 +38,13 @@ function Home (){
   useEffect(() => {
     if (params.videoId){
       axios
-      .get(`https://project-2-api.herokuapp.com/videos/${params.videoId}/?api_key=2674a343-d3a8-4521-a489-4042f7462147`)
+      .get(`http://localhost:8080/videos/${params.videoId}`)
       .then((response) => {
         setActiveVideo(response.data);
       })
     }else{
       axios
-      .get(`https://project-2-api.herokuapp.com/videos/84e96018-4022-434e-80bf-000ce4cd12b8?api_key=2674a343-d3a8-4521-a489-4042f7462147`)
+      .get(`http://localhost:8080/videos/84e96018-4022-434e-80bf-000ce4cd12b8`)
       .then ((response) => {
         setActiveVideo(response.data);
        

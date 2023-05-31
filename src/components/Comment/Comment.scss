@@ -114,13 +114,18 @@
     @include tablet{
      height: 2rem;
      width: 95%;
+     font-size: 0.75rem;
+     padding: 1.5%;
+     padding-bottom: 0;
      
      
     }
     @include desktop{
       height: 2rem;
       width: 95%;
-      
+      font-size: 0.75rem;
+      padding: 1.5%;
+      padding-bottom: 0;
     } 
     
   }

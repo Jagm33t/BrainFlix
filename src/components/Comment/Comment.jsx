@@ -73,6 +73,7 @@ function Comment (props){
          type="submit" 
          id="submit-btn"
          onClick={() => {
+           
           props.postComment(newComment);
           setNewComment('');
          }}

@@ -2,20 +2,35 @@ import { useState ,  useEffect } from 'react';
 import "./Upload.scss";
 import thumbnail from "../../assets/Images/Upload-video-preview.jpg";
 import { useNavigate } from "react-router-dom";
+import axios from 'axios';
 
 
 
 function Upload(){
 
+
+
   const navigate = useNavigate();
   const handleSubmit = (event) => {
-   
-    //Prevent defaultPage Load 
+        //Prevent defaultPage Load 
     event.preventDefault();
+    axios.post('http:/localhost:8080/videos',{
+    
+     title: event.target.uploadTitleInput.value,
+     description: event.target.uploadVideoInput.value,
+     
+    })
+    .then (res => {
+      
+      
+          // Display an alert
+    alert('Form submitted successfully! Congratulationssssss');
+    event.target.reset()
+
+    })
+   
    
 
-    // Display an alert
-    alert('Form submitted successfully! Congratulationssssss');
   
     //Navigate to home page after form submit
   
@@ -35,10 +50,10 @@ function Upload(){
 
 <div className="upload-videodetails">
 <label htmlFor="upload-titleinput" className="upload-title__label">TITLE YOUR VIDEO</label>
-      <textarea type="textarea" className="upload-title__text" id="upload-titleinput" placeholder="Add a title to your video" ></textarea>
+      <textarea type="textarea" className="upload-title__text" id="uploadTitleInput" placeholder="Add a title to your video" ></textarea>
 
       <label htmlFor="upload-videoinput" className="upload-video__label">ADD A VIDEO DESCRIPTION</label>
-      <textarea type="textarea" className="upload-video__text" id="upload-videoinput" placeholder="Add a description to your video" ></textarea>
+      <textarea type="textarea" className="upload-video__text" id="uploadVideoInput" placeholder="Add a description to your video" ></textarea>
 </div>
  
 
