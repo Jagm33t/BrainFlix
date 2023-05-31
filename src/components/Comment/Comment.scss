@@ -9,7 +9,7 @@
 
 
 
-  &-commenthead{
+  &__comment-head{
     font-size: 1rem;
     font-weight: 700;
     font-size: 0.75rem;
@@ -39,9 +39,8 @@
 
     }
   }
-
-
-  &-commenttwo{
+  
+  &__comment-two{
 
     @include tablet{
       display: flex;
@@ -187,12 +186,16 @@
   &-section{
     padding: 0rem 0.6rem 0rem 0.6rem;
   }
-  &-commentconatainer{
-    padding: 1rem;
-  
-   
+
   }
-  &-commentelement{
+
+
+  .comment{
+
+ &-container{
+  padding: 1rem;
+ }
+  &-element{
     border-top: 1px solid $Mercury;
    
     @include desktop{
@@ -200,7 +203,7 @@
     }
   }
   
-  &-commentdisplay{
+  &-display{
     display: inline-block;
     width: 84%;
 
@@ -219,19 +222,19 @@
     display: flex;
     
   }
-  &-commentimgplace{
+  &-imgplace{
     width: 2.25rem;
     height: 2.25rem;
     border-radius: 50%;
     opacity: 10%;
   }
-  &-commentsubdisplay{
+  &-subdisplay{
     display: flex;
     justify-content: space-between;
 
     
   }
-  &-commentname{
+  &-name{
       display:inline-block;
       font-size: 0.87rem;
       font-weight: 700;
@@ -239,7 +242,7 @@
     color: $BrainFlix-Black;
       margin-bottom: 0;
     }
-  &-commenttime{
+  &-time{
       display: inline-block;
       font-size: 0.81rem;
       color: $Silver;
@@ -247,7 +250,7 @@
       margin-bottom: 0;
      
     }
-  &-commentarea{
+  &-area{
       width: 83%;
       padding-left: 1%;
     font-weight: 400;
@@ -264,6 +267,3 @@
     }
     }
   }
-
-
-

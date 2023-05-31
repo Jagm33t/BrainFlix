@@ -28,12 +28,6 @@ export const timeDifference = (timestamp ) => {
   }
 };
 
-
-
-
-
-
-
 function Comment (props){
 
   const [newComment, setNewComment] = useState('');
@@ -49,12 +43,12 @@ function Comment (props){
 <div>
 <div className="main-parttwo">
  
- <h3 className="main-commenthead">{props.activeVideo.comments.length} Comments</h3>
+ <h3 className="main__comment-head">{props.activeVideo.comments.length} Comments</h3>
     <div className="main-commenttype">
-      <div className="main-coomentone">
+      <div className="main-commentone">
       <img className="main-commentimage" src={MainImg} alt="MainImage"/>
       </div>
-      <div className="main-commenttwo">
+      <div className="main__comment-two">
         <div className="main-commentimp">
         <label htmlFor="main-commentinput" className="main-comment__label">JOIN THE CONVERSATION</label>
       <textarea type="textarea"
@@ -84,16 +78,16 @@ function Comment (props){
 
 
     {activeComments.map((comment) => 
-  <div key={comment.id} className="main-commentcontainer">
-    <div className="main-commentelement">
-    <img className="main-commentimgplace" src={MainImg} alt="Placeholder Text"/>
-      <div className="main-commentdisplay">
-        <div className="main-commentsubdisplay">
-          <h3 className="main-commentname">{comment.name}</h3>
-          <p className="main-commenttime">{timeDifference(comment.timestamp)}</p>
+  <div key={comment.id} className="comment-container">
+    <div className="comment-element">
+    <img className="comment-imgplace" src={MainImg} alt="Placeholder Text"/>
+      <div className="comment-display">
+        <div className="comment-subdisplay">
+          <h3 className="comment-name">{comment.name}</h3>
+          <p className="comment-time">{timeDifference(comment.timestamp)}</p>
         </div>
-        <div className="main-imgcom">
-      <p className="main-commentarea">{comment.comment}</p>
+        <div className="comment-imgcom">
+      <p className="comment-area">{comment.comment}</p>
       </div>
     </div>
    </div>

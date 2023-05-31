@@ -12,21 +12,21 @@ function Upload(){
 
   const navigate = useNavigate();
   const handleSubmit = (event) => {
+
+    console.log('data posting?')
         //Prevent defaultPage Load 
     event.preventDefault();
-    axios.post('http:/localhost:8080/videos',{
-    
+    axios.post('http://localhost:8080/videos',{
      title: event.target.uploadTitleInput.value,
      description: event.target.uploadVideoInput.value,
-     
     })
-    .then (res => {
+    .then (response => {
       
-      
+      console.log(response);
           // Display an alert
     alert('Form submitted successfully! Congratulationssssss');
     event.target.reset()
-
+    
     })
    
    
