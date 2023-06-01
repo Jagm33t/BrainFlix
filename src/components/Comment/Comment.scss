@@ -31,6 +31,7 @@
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 1rem;
+ 
 
     
    
@@ -139,7 +140,7 @@
     width: 100%;
     border-radius: 0.25rem;
     font-weight: 700;
-
+    cursor: pointer;
     &:hover{
       background-color: $BrainFlix-DarkBlue;
     }
@@ -190,7 +191,15 @@
   }
 
 
-  .comment{
+.comment{
+
+  &-delete{
+  background-color: $BrainFlix-Blue;
+  border: none;
+  border-radius: 0.25rem;
+  height: 2.25rem;
+  color: $Alabaster;
+  }
 
  &-container{
   padding: 1rem;

@@ -18,7 +18,7 @@ body {
   box-sizing: border-box;
 }
 
-.main-commenthead {
+.main__comment-head {
   font-size: 1rem;
   font-weight: 700;
   font-size: 0.75rem;
@@ -42,18 +42,20 @@ body {
   }
 }
 @media (max-width: 1280px) and (min-width: 768px) {
-  .main-commenttwo {
+  .main__comment-two {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     width: 90%;
   }
 }
 @media (min-width: 1281px) {
-  .main-commenttwo {
+  .main__comment-two {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     width: 90%;
   }
 }
@@ -111,12 +113,18 @@ body {
   .main-comment__text {
     height: 2rem;
     width: 95%;
+    font-size: 0.75rem;
+    padding: 1.5%;
+    padding-bottom: 0;
   }
 }
 @media (min-width: 1281px) {
   .main-comment__text {
     height: 2rem;
     width: 95%;
+    font-size: 0.75rem;
+    padding: 1.5%;
+    padding-bottom: 0;
   }
 }
 .main-comment__btn {
@@ -138,7 +146,7 @@ body {
   .main-comment__btn {
     width: 30%;
     font-weight: 400;
-    margin-top: 2.5%;
+    margin-top: 1.5%;
     background-size: 11%;
     background-position: 0.7rem 0.8rem;
   }
@@ -147,7 +155,7 @@ body {
   .main-comment__btn {
     width: 30%;
     font-weight: 400;
-    margin-top: 3%;
+    margin-top: 2%;
     background-size: 11%;
     background-position: 0.7rem 0.8rem;
   }
@@ -172,45 +180,46 @@ body {
 .main-section {
   padding: 0rem 0.6rem 0rem 0.6rem;
 }
-.main-commentconatainer {
+
+.comment-container {
   padding: 1rem;
 }
-.main-commentelement {
+.comment-element {
   border-top: 1px solid #E1E1E1;
 }
 @media (min-width: 1281px) {
-  .main-commentelement {
+  .comment-element {
     padding-right: 1rem;
   }
 }
-.main-commentdisplay {
+.comment-display {
   display: inline-block;
   width: 84%;
 }
 @media (max-width: 1280px) and (min-width: 768px) {
-  .main-commentdisplay {
+  .comment-display {
     width: 94%;
   }
 }
 @media (min-width: 1281px) {
-  .main-commentdisplay {
+  .comment-display {
     width: 94%;
   }
 }
-.main-imgcom {
+.comment-imgcom {
   display: flex;
 }
-.main-commentimgplace {
+.comment-imgplace {
   width: 2.25rem;
   height: 2.25rem;
   border-radius: 50%;
   opacity: 10%;
 }
-.main-commentsubdisplay {
+.comment-subdisplay {
   display: flex;
   justify-content: space-between;
 }
-.main-commentname {
+.comment-name {
   display: inline-block;
   font-size: 0.87rem;
   font-weight: 700;
@@ -218,13 +227,13 @@ body {
   color: #323232;
   margin-bottom: 0;
 }
-.main-commenttime {
+.comment-time {
   display: inline-block;
   font-size: 0.81rem;
   color: #AFAFAF;
   margin-bottom: 0;
 }
-.main-commentarea {
+.comment-area {
   width: 83%;
   padding-left: 1%;
   font-weight: 400;
@@ -232,12 +241,12 @@ body {
   padding-left: 6%;
 }
 @media (max-width: 1280px) and (min-width: 768px) {
-  .main-commentarea {
+  .comment-area {
     width: 100%;
   }
 }
 @media (min-width: 1281px) {
-  .main-commentarea {
+  .comment-area {
     width: 100%;
   }
 }/*# sourceMappingURL=Comment.css.map */

@@ -7,13 +7,9 @@ import axios from 'axios';
 
 
 function Upload(){
-
-
-
+  const [cancelForm, setCancelForm] = useState(false);
   const navigate = useNavigate();
   const handleSubmit = (event) => {
-
-    console.log('data posting?')
         //Prevent defaultPage Load 
     event.preventDefault();
     axios.post('http://localhost:8080/videos',{
@@ -21,22 +17,17 @@ function Upload(){
      description: event.target.uploadVideoInput.value,
     })
     .then (response => {
-      
-      console.log(response);
           // Display an alert
     alert('Form submitted successfully! Congratulationssssss');
     event.target.reset()
-    
     })
-   
-   
-
-  
     //Navigate to home page after form submit
-  
     navigate("/Home");
   };
-
+  const handleCancel = (event) => {
+    event.preventDefault();
+    setCancelForm(true);
+  };
 
   return (
     <div className="upload">
@@ -60,9 +51,9 @@ function Upload(){
 </div>
 
 <div className="upload-submitsection">
-<button className="upload-cancel__btn1"  id="upload-cancel__btn1">CANCEL</button>
+<button className="upload-cancel__btn1" onClick={handleCancel}  id="upload-cancel__btn1">CANCEL</button>
       <button className="upload-video__btn" type="submit" id="upload-video__btn">PUBLISH</button>
-      <button className="upload-cancel__btn"  id="upload-cancel__btn">CANCEL</button>
+      <button className="upload-cancel__btn" onClick={handleCancel} id="upload-cancel__btn">CANCEL</button>
 
     </div>
     </form>

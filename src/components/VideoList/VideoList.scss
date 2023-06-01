@@ -6,8 +6,16 @@
 .videolist{
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   padding: 0rem 1rem;
+  width: 300px;
+
+  @include tablet{
+    width: 94%;
+    width: 740px;
+  }
   
+ 
 
   &__link{
     text-decoration: none;
@@ -36,6 +44,7 @@
    
     @include tablet{
       width: 40%;
+      padding-top: 1%;
     }
 
   }

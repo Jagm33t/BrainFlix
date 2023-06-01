@@ -183,7 +183,7 @@
     height:2.5rem;
     border-radius: 0.25rem;
     border: none;
-  
+    cursor: pointer;
     &:hover{
       background-color: $BrainFlix-DarkBlue;
     }
@@ -204,7 +204,7 @@
     color: $BrainFlix-Blue;
     width: 100%;
     height:2.5rem;
-   
+    cursor: pointer;
 
     @include tablet {
       
@@ -216,6 +216,7 @@
   }
   &-cancel__btn1{
     display: none;
+    cursor: pointer;
   
     @include tablet {
       display: inline-block;

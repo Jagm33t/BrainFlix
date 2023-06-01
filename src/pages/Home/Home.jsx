@@ -56,7 +56,7 @@ function Home (){
     
   const postComment = (commentText) => {
     axios
-      .post(`https://project-2-api.herokuapp.com/videos/${activeVideo.id}/comments?api_key=2674a343-d3a8-4521-a489-4042f7462147`, {
+      .post(`http://localhost:8080/videos/${activeVideo.id}/comments?api_key=2674a343-d3a8-4521-a489-4042f7462147`, {
         comment: commentText
       })
       .then(response => {

@@ -88,6 +88,12 @@ function Comment (props){
         </div>
         <div className="comment-imgcom">
       <p className="comment-area">{comment.comment}</p>
+      <button 
+      className="comment-delete"
+      onClick={() => {
+     
+      }}
+      >DELETE</button>
       </div>
     </div>
    </div>
