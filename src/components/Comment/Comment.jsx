@@ -44,7 +44,9 @@ function Comment (props){
 <div className="main-parttwo">
  
  <h3 className="main__comment-head">{props.activeVideo.comments.length} Comments</h3>
-    <div className="main-commenttype">
+ <div className="main-commentpost">
+
+ <div className="main-commenttype">
       <div className="main-commentone">
       <img className="main-commentimage" src={MainImg} alt="MainImage"/>
       </div>
@@ -58,23 +60,19 @@ function Comment (props){
        value={newComment}
        onChange={event => setNewComment(event.target.value)}
        required>
-
       </textarea>
-        
         </div>
-
         <button className="main-comment__btn"
          type="submit" 
          id="submit-btn"
          onClick={() => {
-           
           props.postComment(newComment);
           setNewComment('');
          }}
          >COMMENT</button>
       </div>
-  
-    </div>
+ </div>
+</div>
 
 
     {activeComments.map((comment) => 
@@ -90,9 +88,7 @@ function Comment (props){
       <p className="comment-area">{comment.comment}</p>
       <button 
       className="comment-delete"
-      onClick={() => {
-     
-      }}
+ 
       >DELETE</button>
       </div>
     </div>

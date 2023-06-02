@@ -53,20 +53,35 @@ function Home (){
     }
    
   }, [params.videoId]);
-    
+
   const postComment = (commentText) => {
     axios
-      .post(`http://localhost:8080/videos/${activeVideo.id}/comments?api_key=2674a343-d3a8-4521-a489-4042f7462147`, {
-        comment: commentText
+      .post(`http://localhost:8080/videos/${activeVideo.id}`, {
+        comment: commentText,
       })
-      .then(response => {
-        const newComment = response.data;
-        setComments([...comments, newComment]);
+      .then((response) => {
+        // Fetch the updated comments from the server
+        axios
+          .get(`http://localhost:8080/videos/${activeVideo.id}`)
+          .then((response) => {
+            const updatedVideo = response.data;
+            setComments(updatedVideo.comments);
+          })
+          .catch((error) => {
+            console.log('Error fetching updated comments:', error);
+          });
       })
-      .catch(error => {
+      .catch((error) => {
         console.log('Error posting comment:', error);
       });
   };
+
+
+
+ 
+
+  
+  
 
   return(
     <>
