@@ -34,7 +34,7 @@ function Comment (props){
 
   // console.log(props.comments)
   const activeComments = props.activeVideo.comments;
-
+console.log(props.deleteComment)
 
   return (
 
@@ -88,7 +88,9 @@ function Comment (props){
       <p className="comment-area">{comment.comment}</p>
       <button 
       className="comment-delete"
- 
+      onClick={() => {
+      props.deleteComment(comment.id)
+      }}
       >DELETE</button>
       </div>
     </div>

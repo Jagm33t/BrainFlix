@@ -1,4 +1,4 @@
-// import { useState } from 'react';
+
 import "./Home.scss";
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
@@ -41,6 +41,7 @@ function Home (){
       .get(`http://localhost:8080/videos/${params.videoId}`)
       .then((response) => {
         setActiveVideo(response.data);
+        
       })
     }else{
       axios
@@ -54,6 +55,7 @@ function Home (){
    
   }, [params.videoId]);
 
+  
   const postComment = (commentText) => {
     axios
       .post(`http://localhost:8080/videos/${activeVideo.id}`, {
@@ -75,11 +77,32 @@ function Home (){
         console.log('Error posting comment:', error);
       });
   };
+  
+  const deleteComment = (commentId) => {
+    axios
+      .delete(`http://localhost:8080/videos/${activeVideo.id}/comments/${commentId}`)
+      .then(response => {
+        console.log('Comment deleted successfully', response);
 
+        // Fetch the updated comments from the server
+        axios
+          .get(`http://localhost:8080/videos/${activeVideo.id}`)
+          .then(response => {
+            const updatedVideo = response.data;
+            setComments(updatedVideo.comments);
+          })
+          .catch(error => {
+            console.log('Error fetching updated comments:', error);
+          });
+      })
+      .catch(error => {
+        console.error('Error deleting comment', error);
+      });
+  };
 
 
  
-
+console.log("***********************",deleteComment);
   
   
 
@@ -94,7 +117,7 @@ function Home (){
       <div className="details-contentview">
         <Header  activeVideo={activeVideo} />
         <Comment activeVideo={activeVideo} comments={comments}
-  postComment={postComment} />
+  postComment={postComment} deleteComment={deleteComment}/>
       </div>
       <VideoList videos={Videos}  activeVideo={activeVideo} />
     </div>

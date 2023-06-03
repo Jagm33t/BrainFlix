@@ -114,7 +114,7 @@
     }
     
     @include tablet{
-     height: 2rem;
+    height: 2.5rem;
      width: 95%;
      font-size: 0.75rem;
      padding: 1.5%;
@@ -123,7 +123,7 @@
      
     }
     @include desktop{
-      height: 2rem;
+     height: 2.5rem;
       width: 95%;
       font-size: 0.75rem;
       padding: 1.5%;
