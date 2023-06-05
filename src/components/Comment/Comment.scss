@@ -198,6 +198,12 @@
   border-radius: 0.25rem;
   height: 2.25rem;
   color: $Alabaster;
+  font-weight: 700;
+  margin-top: 5%;
+
+  @include tablet{
+
+  }
   }
 
  &-container{

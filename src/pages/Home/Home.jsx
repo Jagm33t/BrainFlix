@@ -33,7 +33,7 @@ function Home (){
         setVideos(response.data);
     
       });
-  }, []);
+  }, []); 
 
   useEffect(() => {
     if (params.videoId){
@@ -100,9 +100,22 @@ function Home (){
       });
   };
 
-
- 
-console.log("***********************",deleteComment);
+  const updateLike = () => {
+    // Check if activeVideo is defined and has the necessary properties
+    if (activeVideo && activeVideo.id) {
+      axios
+        .put(`http://localhost:8080/videos/${activeVideo.id}/likes`)
+        .then(response => {
+          console.log('Likes', response.data);
+        })
+        .catch(error => {
+          console.error('Error updating like:', error);
+        });
+    } else {
+      console.error('Active video is not defined or missing required properties');
+    }
+  };
+  
   
   
 
@@ -115,9 +128,9 @@ console.log("***********************",deleteComment);
     </div>
     <div className="details-content">
       <div className="details-contentview">
-        <Header  activeVideo={activeVideo} />
+        <Header  activeVideo={activeVideo} updateLike={updateLike} />
         <Comment activeVideo={activeVideo} comments={comments}
-  postComment={postComment} deleteComment={deleteComment}/>
+  postComment={postComment} deleteComment={deleteComment} />
       </div>
       <VideoList videos={Videos}  activeVideo={activeVideo} />
     </div>
