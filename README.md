@@ -1,3 +1,9 @@
+## BRAINFLIX
+
+![screenshot](https://github.com/Jagm33t/BrainFlix-client/blob/master/src/assets/Images/brainflixscreen.png)
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
