@@ -28,7 +28,7 @@ function Home (){
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/videos")
+      .get("https://brainflix-api-jnlk.onrender.com/videos")
       .then((response) => {
         setVideos(response.data);
     
@@ -38,14 +38,14 @@ function Home (){
   useEffect(() => {
     if (params.videoId){
       axios
-      .get(`http://localhost:8080/videos/${params.videoId}`)
+      .get(`https://brainflix-api-jnlk.onrender.com/videos/${params.videoId}`)
       .then((response) => {
         setActiveVideo(response.data);
         
       })
     }else{
       axios
-      .get(`http://localhost:8080/videos/84e96018-4022-434e-80bf-000ce4cd12b8`)
+      .get(`https://brainflix-api-jnlk.onrender.com/videos/84e96018-4022-434e-80bf-000ce4cd12b8`)
       .then ((response) => {
         setActiveVideo(response.data);
        
@@ -58,13 +58,13 @@ function Home (){
   
   const postComment = (commentText) => {
     axios
-      .post(`http://localhost:8080/videos/${activeVideo.id}`, {
+      .post(`https://brainflix-api-jnlk.onrender.com/videos/${activeVideo.id}`, {
         comment: commentText,
       })
       .then((response) => {
         // Fetch the updated comments from the server
         axios
-          .get(`http://localhost:8080/videos/${activeVideo.id}`)
+          .get(`https://brainflix-api-jnlk.onrender.com/videos/${activeVideo.id}`)
           .then((response) => {
             const updatedVideo = response.data;
             setComments(updatedVideo.comments);
@@ -80,13 +80,13 @@ function Home (){
   
   const deleteComment = (commentId) => {
     axios
-      .delete(`http://localhost:8080/videos/${activeVideo.id}/comments/${commentId}`)
+      .delete(`https://brainflix-api-jnlk.onrender.com/videos/${activeVideo.id}/comments/${commentId}`)
       .then(response => {
         console.log('Comment deleted successfully', response);
 
         // Fetch the updated comments from the server
         axios
-          .get(`http://localhost:8080/videos/${activeVideo.id}`)
+          .get(`https://brainflix-api-jnlk.onrender.com/videos/${activeVideo.id}`)
           .then(response => {
             const updatedVideo = response.data;
             setComments(updatedVideo.comments);
@@ -104,7 +104,7 @@ function Home (){
     // Check if activeVideo is defined and has the necessary properties
     if (activeVideo && activeVideo.id) {
       axios
-        .put(`http://localhost:8080/videos/${activeVideo.id}/likes`)
+        .put(`https://brainflix-api-jnlk.onrender.com/videos/${activeVideo.id}/likes`)
         .then(response => {
           console.log('Likes', response.data);
         })
