@@ -1,4 +1,4 @@
-import { useState ,  useEffect } from 'react';
+import { useState } from 'react';
 import "./Upload.scss";
 import thumbnail from "../../assets/Images/Upload-video-preview.jpg";
 import { useNavigate } from "react-router-dom";
@@ -8,6 +8,8 @@ import axios from 'axios';
 
 function Upload(){
   const [cancelForm, setCancelForm] = useState(false);
+
+
   const navigate = useNavigate();
   const handleSubmit = (event) => {
         //Prevent defaultPage Load 
@@ -51,6 +53,7 @@ function Upload(){
 </div>
 
 <div className="upload-submitsection">
+{ cancelForm && <span>{cancelForm}</span> }
 <button className="upload-cancel__btn1" onClick={handleCancel}  id="upload-cancel__btn1">CANCEL</button>
       <button className="upload-video__btn" type="submit" id="upload-video__btn">PUBLISH</button>
       <button className="upload-cancel__btn" onClick={handleCancel} id="upload-cancel__btn">CANCEL</button>

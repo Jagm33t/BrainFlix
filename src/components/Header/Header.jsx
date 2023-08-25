@@ -24,8 +24,8 @@ function Header (props){
     </div>
 
 <div className="main-viewlike">
-  <p className="main-view"><span><img src={Views} /></span>{props.activeVideo.views}</p>
-  <p className="main-like"><span onClick={() => props.updateLike(props.activeVideo.likesId)}><img src={Likes} /></span>{props.activeVideo.likes}</p>
+  <p className="main-view"><span><img src={Views} alt="Views"/></span>{props.activeVideo.views}</p>
+  <p className="main-like"><span onClick={() => props.updateLike(props.activeVideo.likesId)}><img src={Likes} alt="Likes" /></span>{props.activeVideo.likes}</p>
   </div>
 
     </div>
